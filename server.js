@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys Recordings Downloader</title>
+
+
 // Import built in libraries needed.
 const http = require('https');
 const fs = require('fs');
