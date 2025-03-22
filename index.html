@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys Recordings Downloader</title>
+    <script>
+        async function startDownload() {
+            const division = document.getElementById("division").value;
+            const user = document.getElementById("user").value;
+            const queue = document.getElementById("queue").value;
+            const startDate = document.getElementById("start-date").value;
+            const endDate = document.getElementById("end-date").value;
+            
+            if (!division) {
+                alert("Division is required");
+                return;
+            }
+            
+            const requestBody = {
+                division,
+                user: user || null,
+                queue: queue || null,
+                startDate,
+                endDate
+            };
+            
+            document.getElementById("status").innerText = "Downloading...";
+            
+            try {
+                const response = await fetch("/start-download", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(requestBody)
+                });
+                
+                const result = await response.json();
+                document.getElementById("status").innerText = result.message;
+            } catch (error) {
+                document.getElementById("status").innerText = "Error starting download";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Genesys Recordings Downloader</h1>
+    <label>Division:</label>
+    <input type="text" id="division" required><br>
+    <label>User (optional):</label>
+    <input type="text" id="user"><br>
+    <label>Queue (optional):</label>
+    <input type="text" id="queue"><br>
+    <label>Start Date:</label>
+    <input type="datetime-local" id="start-date"><br>
+    <label>End Date:</label>
+    <input type="datetime-local" id="end-date"><br>
+    <button onclick="startDownload()">Start Download</button>
+    <p id="status"></p>
+</body>
+</html>
