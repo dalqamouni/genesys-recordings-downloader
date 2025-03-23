@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
-  <title>Conversations Anywhere</title>
-  <base href="/ConversationsAnywhere/">
+  <title>genesys-recordings-downloader</title>
+  <base href="/genesys-recordings-downloader/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="config.js"></script>
