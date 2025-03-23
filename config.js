@@ -21,4 +21,3 @@
   window.__config.siteUrl = '';
 
 }(this));
-
