@@ -2,9 +2,9 @@
 (function (window) {
   window.__config = window.__config || {};
 
-  window.__config.apiUrl = "https://192.168.50.19/ConversationsAnywhereAPI/";
+  window.__config.apiUrl = "https://dalqamouni/Genesys_Cloud_Downloader/Program/";
 
-  window.__config.ftpPath = "https://192.168.50.19/ConversationsAnywhereFTP/";
+  window.__config.ftpPath = "https://dalqamouni/Genesys_Cloud_Downloader/";
 
   window.__config.enableDebug = true;
 
@@ -12,9 +12,9 @@
 
   window.__config.sessionExpiration = 20;
 
-  window.__config.GenesysClientID = '8c8eedc6-6f81-4f7b-a86e-3328be2795bd';
+  window.__config.GenesysClientID = '4d437771-ca23-4c3f-a43f-1e8ac0018ffe';
 
-  window.__config.GenesysClientSecret = 'q1os2R76Y-xPBk8bGd2XrsoOQCqpWlSRy11aVUFULxU';
+  window.__config.GenesysClientSecret = '6xLKIc560iZtW27aDMzhlixC-PXkz35mjqoLyNsYWZo';
 
   window.__config.GenesysHost = 'mypurecloud.ie';
 
